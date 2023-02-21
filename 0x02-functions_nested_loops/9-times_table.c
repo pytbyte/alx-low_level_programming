@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * 9-times_table - Prints the multiplacation of 0 to 9 by 9.
+ * times_table - Prints the multiplacation of 0 to 9 by 9.
  */
 void times_table(void)
 {
