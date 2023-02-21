@@ -4,11 +4,15 @@
  * C file : Prints  _putchar and returns "0"
  * authour: Kamau Macharia
  *
+ * return 0
+ *
  */
+ 
+
 
 int main(void)
 {
-	/* create variable to be printed */
+	/* create variable containing all the characters in the info */
 	char *info = "_putchar";
 
 	/* while loop to print every character */
