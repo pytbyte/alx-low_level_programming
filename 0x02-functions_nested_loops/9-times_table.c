@@ -3,7 +3,7 @@
 /**
  * 9-times_table - Prints the multiplacation of 0 to 9 by 9.
  */
-void 9-times_table(void)
+void times_table(void)
 {
 	int x, y, z;
 
