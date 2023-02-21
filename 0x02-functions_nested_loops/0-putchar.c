@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "holberton.h"
+#include "main.h"
 /*
  *
  * C file : Prints  _putchar and returns "0"
@@ -15,10 +14,11 @@ int main(void)
 	/* while loop to print every character */
 	while (*info)
 	{	
-		putchar(*info);
+		_putchar(*info);
 		info++;
 	}
-	putchar('\n');
+	_putchar('\n');
 
 	return (0);
 }
+
