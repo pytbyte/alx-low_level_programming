@@ -1,15 +1,8 @@
 #include "main.h"
-/*
- *
- * C file : Prints  _putchar and returns "0"
- * authour: Kamau Macharia
- *
- * return 0
- *
+/**
+ * main - Function that prints __putchar to the screen
+ * Return: 0 always a success
  */
- 
-
-
 int main(void)
 {
 	/* create variable containing all the characters in the info */
@@ -17,7 +10,7 @@ int main(void)
 
 	/* while loop to print every character */
 	while (*info)
-	{	
+	{
 		_putchar(*info);
 		info++;
 	}
@@ -25,4 +18,3 @@ int main(void)
 
 	return (0);
 }
-
