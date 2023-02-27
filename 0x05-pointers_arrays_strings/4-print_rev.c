@@ -1,26 +1,24 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * rev_string - reverses a string
- * _putchar - print each reveresed string
- * @s: char to check
+ *rev_string - Reverses a string
+ *@s: String to be reversed
  *
- * Description: prints last first and first last
- * Return: 0 is success
+ *Return: Void
  */
 void rev_string(char *s)
 {
-	int a = 0, x, y;
-	char z;
+	int i = 0, num = 0, hold = 0;
 
-	while (s[a] != '\0')
+	while (s[num] != 0)
 	{
-		a++;
+		num++;
 	}
-	y = a - 1;
-	for (x = 0; y >= 0 && x < y; y--, x++)
+	while (i < num / 2)
 	{
-		z = s[x];
-		s[x] = s[y];
-		s[y] = z;
+		hold = s[i];
+		s[i] = s[num - 1 - i];
+		s[num - 1 - i] = hold;
+		i++;
 	}
 }
