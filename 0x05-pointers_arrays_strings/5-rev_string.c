@@ -12,8 +12,8 @@ void rev_string(char *s)
 	for (g = '\0'; s[g] != 0; g++)
 	{
 	}
-	r_s = 0;
-	for (g = g - 1; _s < g; r_s++)
+	_s = 0;
+	for (g = g - 1; _s < g; _s++)
 	{
 		character = s[g];
 		s[g] = s[_s];
