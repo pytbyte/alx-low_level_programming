@@ -5,7 +5,7 @@
  */
 void rev_string(char *s)
 {
-	int i[];
+	int i;
 	int n = 0;
 
 	while (*s != '\0')
@@ -14,7 +14,7 @@ void rev_string(char *s)
 		s++;
 	}
 	n--;
-	for (i = n ; i >= 0; i--)
+	for (i[] = n ; i[] >= 0; i[]--)
 	{
 		s--;
 		_putchar(*s);
