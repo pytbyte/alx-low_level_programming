@@ -5,8 +5,7 @@
  *
  * @src: source of strings
  * @dest: destination of string
- * @n:  int 
- *
+ * @n: int
  * Return: pointer to string dest
  */
 char *_strncpy(char *dest, char *src, int n)
