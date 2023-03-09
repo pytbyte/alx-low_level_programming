@@ -1,18 +1,18 @@
 #include "main.h"
 
-int _sqrt_recursion(int n, int i);
+int base_sqrt_recursion(int n, int i);
 
 /**
- * _sqrt_recursion - a function that returns the square root of a number
+ * base_sqrt_recursion - a function that returns the square root of a number
  * @n: number to  check sq root
  *
  * Return: square root obtained
  */
-int _sqrt_recursion(int n)
+int base_sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (_sqrt_recursion(n, 0));
+	return (base_sqrt_recursion(n, 0));
 }
 
 /**
