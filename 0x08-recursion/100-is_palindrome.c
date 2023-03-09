@@ -13,7 +13,7 @@ int is_palindrome(char *s)
 {
 	if (*s == 0)
 		return (1);
-	return (checker(s, 0, xtra_recursion(s)));
+	return (checker(s, 0, _strlen_recursion(s)));
 }
 
 /**
