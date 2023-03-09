@@ -17,16 +17,16 @@ int is_palindrome(char *s)
 }
 
 /**
- * xtra_recursion - a function that returns the length of a string
+ * _strlen_recursion - a function that returns the length of a string
  * @s: string to calculate the length of
  *
  * Return: length of the string
  */
-int xtra_recursion(char *s)
+int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 		return (0);
-	return (1 + xtra_recursion(s + 1));
+	return (1 + _strlen_recursion(s + 1));
 }
 
 /**
