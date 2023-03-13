@@ -1,41 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * main - prints minimum number of coins to make change for an amount of money.
- * @argc: number of arguments passed to the function
- * @argv: argument vector of pointers to strings
+ * main - prints the minimum number of coins to
+ * make change for an amount of money
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: 0 if no errors, else 1
+ * Return: 0 for Success, 1 for Error
  */
-int mxin(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int x, n = 0, i, t;
-	int c[5] = {25, 10, 5, 2, 1};
+	int num, j, result;
+	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
-		puts("Error");
+		printf("Error\n");
 		return (1);
 	}
-	x = atoi(argv[1]);
-	if (x <= 0)
+
+	num = atoi(argv[1]);
+	result = 0;
+
+	if (num < 0)
 	{
-		puts("0");
-		return (1);
+		printf("0\n");
+		return (0);
 	}
-	else
+
+	for (j = 0; j < 5 && num >= 0; j++)
 	{
-		for (i = 0; i < 5; i++)
+		while (num >= coins[j])
 		{
-			t = x / c[i];
-			x -= t * c[i];
-			n += t;
-			if (x == 0)
-				break;
+			result++;
+			num -= coins[j];
 		}
 	}
-	printf("%d\n", n);
+
+	printf("%d\n", result);
 	return (0);
 }
 
