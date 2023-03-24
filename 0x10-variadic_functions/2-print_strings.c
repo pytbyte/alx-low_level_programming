@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_strings - prints strings
+ * print_strings - a function that prints strings, followed by a new line.
  * @separator: separator between strings
  * @n: number of arguments
  */
@@ -25,7 +25,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	else if (separator && i == 0)
 		printf("%s", str);
 	else
-		printf("%s", separator, str);
+		printf("%s%s", separator, str);
 	}
 	printf("\n");
 	va_end(listed);
