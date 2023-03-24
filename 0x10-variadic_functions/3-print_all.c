@@ -4,34 +4,46 @@
  * print_all - prints anything
  * @format: list of types of arguments passed to the function
  */
-
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	unsigned int i = 0, j;
-	char *str;
-	const char *sep = "";
+	int i = 0;
+	char *str, *sep = "";
 
-	va_start(args, format);
-	while (format && format[i])
+	va_list list;
+
+	va_start(list, format);
+
+	if (format)
 	{
-		j = 0;
-
-		while (g_format[j].type)
+		while (format[i])
 		{
-			if (*(g_format[j].type) == format[i])
+			switch (format[i])
 			{
-				printf("%s", sep);
-				str = g_format[j].f(args);
-				printf("%s", str);
-				sep = ", ";
-				free(str);
-				break;
+				case 'c':
+					printf("%s%c", sep, va_arg(list, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(list, double));
+					break;
+				case 's':
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
 			}
-			j++;
+			sep = ", ";
+			i++;
 		}
-		i++;
 	}
+
 	printf("\n");
-	va_end(args);
+	va_end(list);
 }
+
