@@ -16,10 +16,11 @@ void print_all(const char * const format, ...)
 	while (format && format[i])
 	{
 		j = 0;
-		while (g_format[j].type)
-		{
+}
+	while (g_format[j].type)
+	{
 	if (*(g_format[j].type) == format[i])
-				{
+			{
 					printf("%s", sep);
 					str = g_format[j].f(args);
 					printf("%s", str);
@@ -28,8 +29,8 @@ void print_all(const char * const format, ...)
 					break;
 				}
 				j++;
-		}
-		i++;
+	}
+	i++;
 	}
 	printf("\n");
 	va_end(args);
