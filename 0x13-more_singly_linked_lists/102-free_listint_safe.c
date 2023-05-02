@@ -23,7 +23,7 @@ size_t free_listint_safe(listint_t **head)
 		if (current_node == *head)
 		{
 			*head = NULL;
-			break;
+			return (0);
 		}
 	}
 
