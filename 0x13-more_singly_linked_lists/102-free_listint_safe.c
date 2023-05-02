@@ -17,8 +17,8 @@ size_t free_listint_safe(listint_t **head)
 	{
 		next = current_node->next;
 		free(current_node);
-		current_node = next;
 		node_count++;
+		current_node = next;
 
 		if (current_node == *head)
 		{
