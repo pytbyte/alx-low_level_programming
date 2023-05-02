@@ -8,10 +8,11 @@
  *
  * Return: 1 (Success), or -1 (Fail)
  */
+
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *temp_head = *head;
-	listint_t *node_this = NULL;
+	listint_t *current_node = NULL;
 	unsigned int count = 0;
 
 	if (*head == NULL)
