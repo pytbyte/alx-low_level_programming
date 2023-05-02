@@ -2,29 +2,29 @@
 #include <stdlib.h>
 
 /**
- * free_listint_safe - Frees a listint_t linked list safely.
- * @head: A pointer to the first node.
+ * free_listint_safe - Frees a listint_t linked list.
+ * @h: A pointer to the first node.
  *
- * Return: The size of the freed node.
+ * Return: The number of freed nodes.
  */
-size_t free_listint_safe(listint_t **head)
+size_t free_listint_safe(listint_t **h)
 {
-	listint_t *current_node = *head;
-	listint_t *next;
-	size_t node_count = 0;
+	size_t count = 0;
+	listint_t *current_node, *next_node;
 
-	if (*head == NULL)
-	{
+	if (!h || !*h)
 		return (0);
-	}
 
-	while (current_node != NULL)
+	current_node = *h;
+	while (current_node)
 	{
-		next = current_node->next;
+		next_node = current_node->next;
 		free(current_node);
-		current_node = next;
-		node_count++;
+		count++;
+		if (next_node >= current_node)
+			break;
+		current_node = next_node;
 	}
 
-	return (node_count);
+	*h = NULL;
 }
