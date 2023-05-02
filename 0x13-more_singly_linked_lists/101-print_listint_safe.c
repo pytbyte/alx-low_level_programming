@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * print_listint_safe - function that prints a linked list.
- * @head: pointer to the first node 
+ * @head: pointer to the first node
  * Return: new_node
  */
 size_t print_listint_safe(const listint_t *head)
