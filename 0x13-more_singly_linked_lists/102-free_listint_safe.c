@@ -13,18 +13,17 @@ size_t free_listint_safe(listint_t **head)
 	listint_t *next;
 	size_t node_count = 0;
 
+	if (*head == NULL)
+	{
+		return (0);
+	}
+
 	while (current_node != NULL)
 	{
 		next = current_node->next;
 		free(current_node);
-		node_count++;
 		current_node = next;
-
-		if (current_node == *head)
-		{
-			*head = NULL;
-			return (0);
-		}
+		node_count++;
 	}
 
 	return (node_count);
