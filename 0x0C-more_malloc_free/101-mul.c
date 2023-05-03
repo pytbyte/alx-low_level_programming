@@ -7,7 +7,7 @@
  * @s: string to check
  *
  * Return: 0 or 1
- * /
+ **/
 int is_digit(char *s)
 {
 	int i = 0;
