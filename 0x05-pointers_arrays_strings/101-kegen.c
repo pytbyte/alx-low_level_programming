@@ -3,8 +3,6 @@
 #include <time.h>
 /**
  * main - program that generates random valid
- *
- *
  * Return: Always 0 (Success)
  */
 int main(void)
