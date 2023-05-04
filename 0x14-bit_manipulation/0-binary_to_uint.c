@@ -9,7 +9,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int total, power;
+	unsigned int counted, weight;
 	int count;
 
 	if (b == NULL)
@@ -21,11 +21,11 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 	}
 
-	for (power = 1, total = 0, count--; count >= 0; count--, power *= 2)
+	for (weight = 1, counted = 0, count--; count >= 0; count--, weight *= 2)
 	{
 		if (b[count] == '1')
-			total += power;
+			counted += weight;
 	}
 
-	return (total);
+	return (counted);
 }
