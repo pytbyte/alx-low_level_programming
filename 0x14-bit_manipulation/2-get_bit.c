@@ -1,30 +1,21 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * get_bit - Returns the value of a bit at a given index
- * @n: The number to retrieve the bit from
- * @index: The index of the bit to retrieve
- *
- * Return: The value of the bit at the index or -1 if an error occurred
+ * get_bit - get the value of a bit at a given index
+ * @n: number to evaluate
+ * @index: index starting from 0, of the bit we want to get
+ * Return: Value of bit at index, or -1 if error
  */
+
 int get_bit(unsigned long int n, unsigned int index)
 {
-	/* Step 1: Check if the index is within the valid range. */
-	if (index >= (sizeof(unsigned long int) * 8))
+	unsigned long int temp;
+
+	if (index > 64)
 		return (-1);
 
-	/* Step 2: Shift 1 to the left by the index to create a mask. */
-	unsigned long int mask = 1 << index;
+	temp = n >> index;
 
-	/**
-     * Step 3: AND the mask with the number to get the value of
-     * the bit at the index.
-     */
-	unsigned long int bit = n & mask;
-
-	/* Step 4: If the value is 0 or 1, return it. Otherwise, return -1. */
-	if (bit)
-		return (1);
-	else
-		return (0);
+	return (temp & 1);
 }
