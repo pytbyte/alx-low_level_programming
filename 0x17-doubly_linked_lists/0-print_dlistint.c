@@ -19,7 +19,7 @@ size_t print_dlistint(const dlistint_t *h)
 		node_count++;
 	}
 
-	printf("Total nodes: %lu\n", (unsigned long)node_count);
+	printf("node count: %lu\n", (unsigned long)node_count);
 
 	return (node_count);
 }
